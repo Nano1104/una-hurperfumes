@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #2f2a25;
+  --color-dorado: #f3ca4c;
+  --color-claro: #f2f0ef;
+  --font-titulo: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
