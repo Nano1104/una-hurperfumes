@@ -12,7 +12,7 @@ function ProductoCard({ producto, agregarAlCarrito }) {
                 <img
                     src={imagen}
                     alt={nombre}
-                    className={`aspect-square w-full object-cover ${sinStock ? "opacity-50 grayscale" : ""
+                    className={`aspect-square w-full bg-white object-contain p-4 ${sinStock ? "opacity-50 grayscale" : ""
                         }`}
                 />
 

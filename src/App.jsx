@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Productos from "./pages/Productos";
 import DetalleProducto from "./pages/DetalleProducto";
@@ -60,7 +61,7 @@ function App() {
 
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home agregarAlCarrito={agregarAlCarrito} />} />
           <Route
             path="/productos"
             element={<Productos agregarAlCarrito={agregarAlCarrito} />}
@@ -88,6 +89,8 @@ function App() {
           />
         </Routes>
       </main>
+
+      <Footer />
     </div>
   );
 }

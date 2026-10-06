@@ -13,7 +13,7 @@ function CarritoItem({ item, cambiarCantidad, eliminarDelCarrito }) {
             <img
                 src={imagen}
                 alt={nombre}
-                className="h-24 w-24 shrink-0 rounded-lg object-cover"
+                className="h-24 w-24 shrink-0 rounded-lg bg-white object-contain p-1"
             />
 
             <div className="flex-1">

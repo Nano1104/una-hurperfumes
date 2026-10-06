@@ -1,11 +1,17 @@
 // src/pages/Productos.jsx
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { productos, categorias } from "../data/productos";
 import ProductoCard from "../components/ProductoCard";
 
 function Productos({ agregarAlCarrito }) {
+    // Si venimos del inicio con /productos?categoria=Mujer, arrancamos con ese filtro
+    const [searchParams] = useSearchParams();
+    const categoriaUrl = searchParams.get("categoria");
+    const categoriaInicial = categorias.includes(categoriaUrl) ? categoriaUrl : "Todas";
+
     const [busqueda, setBusqueda] = useState("");
-    const [categoria, setCategoria] = useState("Todas");
+    const [categoria, setCategoria] = useState(categoriaInicial);
     const [orden, setOrden] = useState("ninguno");
     const [soloConStock, setSoloConStock] = useState(false);
 

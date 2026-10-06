@@ -39,17 +39,21 @@ src/
   App.css                  # restos del template de Vite, NO se importa (se puede borrar)
   components/
     NavBar.jsx             # header sticky, menú hamburguesa en mobile, badge del carrito
+    Footer.jsx             # pie de página con enlaces y copyright
+    ProductoCard.jsx       # tarjeta de producto (catálogo e inicio)
+    CarritoItem.jsx        # fila de un producto en el carrito
+    FormularioCompra.jsx   # formulario de contacto / compra
   data/
     productos.js           # catálogo estático (16 perfumes) + `categorias`
   pages/
-    Home.jsx               # /
+    Home.jsx               # /                     (portada, destacados, categorías, beneficios)
     Productos.jsx          # /productos            (catálogo + filtro por categoría)
     DetalleProducto.jsx    # /producto/:id
     Carrito.jsx            # /carrito
     Contacto.jsx           # /contacto              (formulario / finalizar compra)
 public/
   favicon.svg, icons.svg
-  img/                     # (a crear) imágenes de productos
+  img/                     # imágenes de productos (.jpg / .webp)
 ```
 
 ## Rutas y props
@@ -58,13 +62,13 @@ Definidas en `src/App.jsx`:
 
 | Ruta | Página | Props que recibe |
 |---|---|---|
-| `/` | `Home` | — |
-| `/productos` | `Productos` | `agregarAlCarrito` |
+| `/` | `Home` | `agregarAlCarrito` (para las tarjetas de destacados) |
+| `/productos` | `Productos` | `agregarAlCarrito` (acepta `?categoria=Mujer` (u otra categoría) como filtro inicial) |
 | `/producto/:id` | `DetalleProducto` | `agregarAlCarrito` (el id se lee con `useParams`) |
 | `/carrito` | `Carrito` | `carrito`, `total`, `cantidadTotal`, `cambiarCantidad`, `eliminarDelCarrito`, `vaciarCarrito` |
 | `/contacto` | `Contacto` | `carrito`, `vaciarCarrito` |
 
-`NavBar` recibe `cantidadTotal` para el badge.
+`NavBar` recibe `cantidadTotal` para el badge. `Footer` se renderiza debajo de `<main>` en todas las páginas.
 
 ## Estado del carrito
 
@@ -115,11 +119,10 @@ Estética: lujo/elegante — fondo claro, header oscuro con acentos dorados, tí
 
 ## Estado actual y problemas conocidos
 
-- Las páginas (`Home`, `Productos`, `DetalleProducto`, `Carrito`, `Contacto`) son **placeholders** que solo muestran un `<h1>`; falta implementarlas. `Home` tiene un `text-blue-400` de prueba.
-- La carpeta `public/img/` y las imágenes de productos todavía no existen.
+- Todas las páginas están implementadas.
 - `babel-plugin-react-compiler` y `@rolldown/plugin-babel` están en devDependencies, pero `vite.config.js` no los usa (el React Compiler no está activo).
-- `README.md` es el del template de Vite y `App.css` es código muerto del template.
-- No es un repositorio git todavía.
+- `App.css` es código muerto del template de Vite.
+- Repositorio git con remoto en GitHub (`Nano1104/una-hurperfumes`).
 
 ## Convenciones
 

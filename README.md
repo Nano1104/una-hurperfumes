@@ -1,19 +1,81 @@
-# React + Vite
+# Una Hurparfum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tienda online de perfumes desarrollada como trabajo práctico de la materia **Construcción de Interfaces** (Universidad).
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Una Hurparfum** es una SPA (Single Page Application) de una perfumería con estética elegante. Permite:
 
-## React Compiler
+- Ver la página de inicio de la tienda.
+- Recorrer el catálogo de perfumes y filtrarlo por categoría (Hombre, Mujer, Unisex).
+- Ver el detalle de cada producto (descripción, precio, características y stock).
+- Agregar productos al carrito, modificar cantidades (respetando el stock disponible) y eliminarlos.
+- Completar un formulario de contacto para finalizar la compra.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+El proyecto es solo frontend: no tiene backend ni base de datos. El catálogo se carga desde un archivo estático (`src/data/productos.js`) y el carrito se guarda en memoria, por lo que se pierde al recargar la página.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/) — librería para construir la interfaz.
+- [Vite 8](https://vite.dev/) — herramienta de desarrollo y build.
+- [React Router DOM 7](https://reactrouter.com/) — navegación entre páginas.
+- [Tailwind CSS 4](https://tailwindcss.com/) — estilos con clases utilitarias.
+- [ESLint](https://eslint.org/) — análisis estático del código.
+- Google Fonts: Inter y Playfair Display.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Instalación y ejecución
+
+### Requisitos previos
+
+- [Node.js](https://nodejs.org/) 20.19 o superior (recomendado: la última versión LTS).
+- npm (viene incluido con Node.js).
+
+### Pasos
+
+1. Clonar el repositorio:
+
+   ```bash
+   git clone https://github.com/Nano1104/una-hurperfumes.git
+   cd una-hurperfumes
+   ```
+
+2. Instalar las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Levantar el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Abrir en el navegador la URL que muestra la consola (por defecto <http://localhost:5173>).
+
+### Otros comandos
+
+| Comando           | Descripción                                       |
+| ----------------- | ------------------------------------------------- |
+| `npm run build`   | Genera el build de producción en la carpeta `dist/`. |
+| `npm run preview` | Sirve localmente el build de producción.          |
+| `npm run lint`    | Ejecuta ESLint sobre el proyecto.                 |
+
+## Integrantes del grupo
+
+- Mariano Gil
+- _Nombre y apellido_
+- _Nombre y apellido_
+
+## Capturas de pantalla
+
+<!-- Agregar las imágenes en una carpeta (ej. docs/capturas/) y descomentar: -->
+<!-- ![Inicio](docs/capturas/inicio.png) -->
+<!-- ![Catálogo](docs/capturas/productos.png) -->
+<!-- ![Carrito](docs/capturas/carrito.png) -->
+
+_Próximamente._
+
+## Deploy
+
+_Pendiente._ <!-- Reemplazar por el link, ej: https://una-hurparfum.vercel.app -->
